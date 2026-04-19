@@ -1,0 +1,4 @@
+[
+  {"id": 2, "description": "homework", "status": "IN_PROGESS", "createdAt": "2026-04-19T20:24:43.703771600", "updatedAt": "2026-04-19T20:24:43.705779600"},
+  {"id": 3, "description": "assignment", "status": "TODO", "createdAt": "2026-04-19T20:24:43.704771", "updatedAt": "2026-04-19T20:24:43.704771"}
+]
