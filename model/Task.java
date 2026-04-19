@@ -9,7 +9,7 @@ public class Task{
     private LocalDateTime updatedAt;
 
     public enum Status{
-        TODO, IN_PROGESS, DONE
+        TODO, IN_PROGRESS, DONE
     }
 
     public Task(int id, String description){
@@ -41,6 +41,10 @@ public class Task{
 
     public void setStatus(String status) {
         this.status = Status.valueOf(status.toUpperCase().replace("-", "_"));
+    }
+
+    public String getStatus() {
+        return status.name();
     }
 
 

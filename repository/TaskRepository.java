@@ -66,9 +66,12 @@ public class TaskRepository{
                 try {
                     String idStr = taskJson.replaceAll(".*?\"id\":\\s*(\\d+).*", "$1");
                     String description = taskJson.replaceAll(".*?\"description\":\\s*\"([^\"]+)\".*", "$1");
-                
+                    String status = taskJson.replaceAll(".*?\"status\":\\s*\"([^\"]+)\".*", "$1");
+
                     int id = Integer.parseInt(idStr);
-                    tasks.add(new Task(id, description));
+                    Task task = new Task(id, description);
+                    task.setStatus(status);
+                    tasks.add(task);
                 } catch (Exception e) {
                 // If one task is corrupted, skip it so the whole app doesn't crash
                     continue; 

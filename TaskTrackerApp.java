@@ -12,13 +12,15 @@ public class TaskTrackerApp{
         String command = args[0];
 
         if(command.equals("list")){
-            if(tasks.isEmpty()){
-                System.out.println("No tasks found.");
-            } else {
-                for(Task task : tasks){
+            String filterStatus = args.length >= 2 ? args[1].toUpperCase().replace("-", "_") : null;
+            boolean found = false;
+            for(Task task : tasks){
+                if(filterStatus == null || task.getStatus().equals(filterStatus)){
                     System.out.println(task.toJson());
+                    found = true;
                 }
             }
+            if(!found) System.out.println("No tasks found.");
         }
         if(args.length >= 2 && args[0].equals("add")){
             String description = args[1];
@@ -81,7 +83,7 @@ public class TaskTrackerApp{
             System.out.println("Error: Please provide task ID.");
         } else {
             int id = Integer.parseInt(args[1]);
-            String newStatus = command.equals("mark-done") ? "DONE" : "IN_PROGESS";
+            String newStatus = command.equals("mark-done") ? "DONE" : "IN_PROGRESS";
             boolean found = false;
 
             for (Task task : tasks) {

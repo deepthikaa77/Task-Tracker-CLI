@@ -1,4 +1,5 @@
 [
-  {"id": 2, "description": "homework", "status": "IN_PROGESS", "createdAt": "2026-04-19T20:24:43.703771600", "updatedAt": "2026-04-19T20:24:43.705779600"},
-  {"id": 3, "description": "assignment", "status": "TODO", "createdAt": "2026-04-19T20:24:43.704771", "updatedAt": "2026-04-19T20:24:43.704771"}
+  {"id": 1, "description": "homework", "status": "IN_PROGRESS", "createdAt": "2026-04-19T20:41:07.741773200", "updatedAt": "2026-04-19T20:41:07.743761800"},
+  {"id": 2, "description": "assignment", "status": "TODO", "createdAt": "2026-04-19T20:41:07.742765600", "updatedAt": "2026-04-19T20:41:07.742765600"},
+  {"id": 3, "description": "chores", "status": "TODO", "createdAt": "2026-04-19T20:41:07.742765600", "updatedAt": "2026-04-19T20:41:07.742765600"}
 ]
